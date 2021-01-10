@@ -24,7 +24,7 @@ jobs:
         run: dart --version
 
       - name: Install dependencies
-        run: dart pub get
+        run: flutter pub get
 
       - name: Flutter action
         uses: subosito/flutter-action@v1.4.0
