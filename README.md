@@ -1,4 +1,4 @@
-# rw_courses
+![Dart](https://github.com/noloman/rwcourses/workflows/Dart/badge.svg)
 
 RayWenderlich courses
 
