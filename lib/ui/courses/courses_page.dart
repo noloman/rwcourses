@@ -20,7 +20,15 @@ class _CoursesStatePage extends State<CoursesPage> {
           if (courses == null) {
             return Center(child: CircularProgressIndicator());
           }
-          return Text(courses.toString());
+          return ListView.builder(
+            itemCount: courses.length,
+            itemBuilder: (context, index) => _buildRow(courses[index]),
+          );
         },
+      );
+
+  Widget _buildRow(Course course) => ListTile(
+        title: Text(course.name),
+        trailing: Image.network(course.artworkUrl),
       );
 }
