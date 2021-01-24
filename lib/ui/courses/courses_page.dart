@@ -27,8 +27,17 @@ class _CoursesStatePage extends State<CoursesPage> {
         },
       );
 
-  Widget _buildRow(Course course) => ListTile(
-        title: Text(course.name),
-        trailing: Image.network(course.artworkUrl),
+  Widget _buildRow(Course course) => Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListTile(
+          title: Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text(course.name),
+          ),
+          trailing: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Image.network(course.artworkUrl),
+          ),
+        ),
       );
 }
