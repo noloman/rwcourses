@@ -30,6 +30,7 @@ class _CoursesStatePage extends State<CoursesPage> {
   Widget _buildRow(Course course) => Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListTile(
+          subtitle: Text(course.domainsString),
           title: Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
             child: Text(course.name),
