@@ -42,9 +42,10 @@ class _CoursesStatePage extends State<CoursesPage> {
           ),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => CourseDetailPage(
-                      course: course,
-                    )));
+              builder: (context) => CourseDetailPage(
+                course: course,
+              ),
+            ));
           },
         ),
       );
