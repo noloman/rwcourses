@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rw_courses/constants.dart';
 import 'package:rw_courses/model/course.dart';
 import 'package:rw_courses/repository/_repository.dart';
+import 'package:rw_courses/ui/course_detail/course_detail_page.dart';
 import 'package:rw_courses/ui/courses/courses_controller.dart';
 
 class CoursesPage extends StatefulWidget {
@@ -39,6 +40,12 @@ class _CoursesStatePage extends State<CoursesPage> {
             borderRadius: BorderRadius.circular(8.0),
             child: Image.network(course.artworkUrl),
           ),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => CourseDetailPage(
+                      course: course,
+                    )));
+          },
         ),
       );
 }
